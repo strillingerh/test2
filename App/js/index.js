@@ -41,6 +41,15 @@ xui.Class('App', 'xui.Module',{
                 .setLabelCaption("Input")
             );
             
+            append(
+                xui.create("xui.UI.Label")
+                .setHost(host,"xui_ui_label19")
+                .setLeft("9.166666666666666em")
+                .setTop("11.666666666666666em")
+                .setWidth("13.25em")
+                .setCaption("Label")
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
@@ -61,6 +70,7 @@ xui.Class('App', 'xui.Module',{
         _xui_ui_button11_onclickdrop:function(profile, e, src, value){
             var ns = this, uictrl = profile.boxing();
             
+            ns.xui_ui_label19.setCaption("Das ist ein Test!");
             ns.xui_ui_input23.setValue("Das ist ein Test!");
         }
         /*,
