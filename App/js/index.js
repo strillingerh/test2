@@ -27,6 +27,7 @@ xui.Class('App', 'xui.Module',{
                 .setLeft("5em")
                 .setTop("5em")
                 .setCaption("Test")
+                .onClick("_xui_ui_button11_onclick")
                 .onClickDrop("_xui_ui_button11_onclickdrop")
             );
             
@@ -50,6 +51,24 @@ xui.Class('App', 'xui.Module',{
                 .setCaption("Label")
             );
             
+            append(
+                xui.create("xui.UI.HTMLButton")
+                .setHost(host,"xui_ui_htmlbutton3")
+                .setLeft("11.666666666666666em")
+                .setTop("4.166666666666667em")
+                .setCaption("Native Button")
+            );
+            
+            append(
+                xui.create("xui.UI.Button")
+                .setHost(host,"xui_ui_button17")
+                .setDirtyMark(false)
+                .setLeft("5.833333333333333em")
+                .setTop("15.833333333333334em")
+                .setCaption("Dropable Button")
+                .setType("drop")
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
@@ -60,16 +79,16 @@ xui.Class('App', 'xui.Module',{
             return false;
         },
         /**
-         * Fired when user click the drop button
-         * @method onClickDrop [xui.UI.Button event]
+         * Fired when user click it
+         * @method onClick [xui.UI.Button event]
          * @param {xui.UIProfile.} profile  The current control's profile object
          * @param {Event} e , Dom event object
          * @param {Element.xui} src  id or Dom Element
          * @param {} value  Object
         */
-        _xui_ui_button11_onclickdrop:function(profile, e, src, value){
+        _xui_ui_button11_onclick:function(profile, e, src, value){
             var ns = this, uictrl = profile.boxing();
-            
+
             ns.xui_ui_label19.setCaption("Das ist ein Test!");
             ns.xui_ui_input23.setValue("Das ist ein Test!");
         }
